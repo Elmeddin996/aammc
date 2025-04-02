@@ -1,0 +1,297 @@
+﻿@model MenuViewModel
+
+<div data-elementor-type="header" data-elementor-id="35" class="elementor elementor-35 elementor-location-header" data-elementor-post-type="elementor_library">
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-e6c4610 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e6c4610" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-04a1c9e" data-id="04a1c9e" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-f3be67b elementor-widget elementor-widget-image" data-id="f3be67b" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<a asp-controller="home" asp-action="index">
+								<img title="logo" alt="logo" loading="lazy" src="~/wp-content/uploads/sites/17/elementor/thumbs/logo.png" class="lazyload logo" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0360281" data-id="0360281" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-70db06e elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="70db06e" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-angle-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+						<div class="elementor-widget-container">
+							<nav aria-label="Menu" style="display:block;" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+								<ul id="menu-1-70db06e" class="elementor-nav-menu" style="justify-content: space-between; display: flex; padding-left: 200px;">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item">Əsas Səhifə</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18">
+										<a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layihələrimiz</a>
+										<ul class="sub-menu elementor-nav-menu--dropdown">
+											@foreach (var item in Model.Project)
+											{
+												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="@Url.Action("Detail", "Services", new { id = item.Id })" class="elementor-sub-item" tabindex="-1">@item.TitleAz</a></li>
+
+											}
+										</ul>
+									</li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a asp-controller="about" asp-action="index" class="elementor-item">Haqqımızda</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item elementor-item-active">Əlaqə</a></li>
+								</ul>
+							</nav>
+							<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+								<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open  ti-menu"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close  ti-close"></i>			<span class="elementor-screen-only">Menu</span>
+							</div>
+							<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+								<ul id="menu-2-70db06e" class="elementor-nav-menu">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item" tabindex="-1">Əsas Səhifə</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a asp-controller="contact" asp-action="index" class="elementor-item" tabindex="-1">Haqqımızda</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18">
+										<a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layihələrimiz</a>
+										<ul class="sub-menu elementor-nav-menu--dropdown">
+											@foreach (var item in Model.Project)
+											{
+												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="@Url.Action("Detail", "Services", new { id = item.Id })" class="elementor-sub-item" tabindex="-1">@item.TitleAz</a></li>
+											}
+										</ul>
+									</li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Əlaqə</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c9c8021 elementor-hidden-mobile" data-id="c9c8021" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-e0110eb elementor-align-right elementor-widget elementor-widget-button" data-id="e0110eb" data-element_type="widget" data-widget_type="button.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-button-wrapper">
+								<a class="elementor-button elementor-button-link elementor-size-sm" asp-controller="contact" asp-action="index">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Bizimlə əlaqə yarat</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div data-elementor-type="wp-post" data-elementor-id="156" class="elementor elementor-156" data-elementor-post-type="envato_tk_templates">
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-d0ecb12 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="d0ecb12" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-313042d" data-id="313042d" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-94e73ee elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="94e73ee" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-background-overlay"></div>
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-f6a7e8a" data-id="f6a7e8a" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-be0575b elementor-invisible elementor-widget elementor-widget-heading" data-id="be0575b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h1 class="elementor-heading-title elementor-size-default">Bizimlə əlaqə yarat</h1>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-e9755b4 elementor-invisible elementor-widget elementor-widget-heading" data-id="e9755b4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h4 class="elementor-heading-title elementor-size-default">
+												Start the conversation to established good relationship and business
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-f1bb3fb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f1bb3fb" data-element_type="section">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7ca1150 elementor-invisible" data-id="7ca1150" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-3275f01 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3275f01" data-element_type="widget" data-widget_type="icon-box.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+								<div class="elementor-icon-box-icon">
+									<span class="elementor-icon elementor-animation-">
+										<i aria-hidden="true" class="mdi mdi-office-building"></i>
+									</span>
+								</div>
+
+								<div class="elementor-icon-box-content">
+
+									<div class="elementor-icon-box-title">
+										<span>
+											Baş Ofis
+										</span>
+									</div>
+
+									<p class="elementor-icon-box-description">
+										Ziya Bünyadov prospekti 1965.</br>
+										Çinar Park Plaza Biznes Mərkəzi, Bina-1.</br>
+										Mərtəbə 3, Ofis-309
+										
+									</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a58f486 elementor-invisible" data-id="a58f486" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-5f97a8f elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="5f97a8f" data-element_type="widget" data-widget_type="icon-box.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+								<div class="elementor-icon-box-icon">
+									<span class="elementor-icon elementor-animation-">
+										<i aria-hidden="true" class="mdi mdi-email"></i>
+									</span>
+								</div>
+
+								<div class="elementor-icon-box-content">
+
+									<div class="elementor-icon-box-title">
+										<span>
+											Bizə yaz
+										</span>
+									</div>
+
+									<p class="elementor-icon-box-description">
+										@Model.Settings.Email
+									</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9fcc824 elementor-invisible" data-id="9fcc824" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-c531e9c elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="c531e9c" data-element_type="widget" data-widget_type="icon-box.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+								<div class="elementor-icon-box-icon">
+									<span class="elementor-icon elementor-animation-">
+										<i aria-hidden="true" class="mdi mdi-phone"></i>
+									</span>
+								</div>
+
+								<div class="elementor-icon-box-content">
+
+									<div class="elementor-icon-box-title">
+										<span>
+											Bizə zəng et
+										</span>
+									</div>
+
+									<p class="elementor-icon-box-description">
+										@Model.Settings.Phone
+									</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-d284ca0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d284ca0" data-element_type="section">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6ed1254" data-id="6ed1254" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-30221c6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="30221c6" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-background-overlay"></div>
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d10c319 elementor-invisible" data-id="d10c319" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-88611bd elementor-widget elementor-widget-heading" data-id="88611bd" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h2 class="elementor-heading-title elementor-size-default">Birbaşa Bizə Yaz</h2>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-ba28109 elementor-widget elementor-widget-text-editor" data-id="ba28109" data-element_type="widget" data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											<p>Sayt vasitəsilə birbaşa bizə yaza bilərsiniz. Əməkdaşlarımız ən qısa zamanda sizə geri dönüş edəcəklər.</p>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-3b3c077 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="3b3c077" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+										<div class="elementor-widget-container">
+											<form class="elementor-form" method="post" enctype="multipart/form-data" name="New Form">
+												<input type="hidden" name="post_id" value="156" />
+												<input type="hidden" name="form_id" value="3b3c077" />
+												<input type="hidden" name="referer_title" value="Contact us" />
+
+												<input type="hidden" name="queried_id" value="156" />
+
+												<div class="elementor-form-fields-wrapper elementor-labels-above">
+													<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100">
+														<label for="form-field-name" class="elementor-field-label">
+															Ad Soyad
+														</label>
+														<input size="1" type="text" class="elementor-field elementor-size-sm  elementor-field-textual" name="Fullname" id="Fullname" placeholder="Ad və soyad qeyd edin" required>
+													</div>
+													<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+														<label for="form-field-email" class="elementor-field-label">
+															Əlaqə Nömrəsi
+														</label>
+														<input size="1" type="number" name="phone" id="phone" placeholder="Nömrə qeyd edin" required class="elementor-field elementor-size-sm  elementor-field-textual">
+													</div>
+
+													<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+														<label for="form-field-email" class="elementor-field-label">
+															Email
+														</label>
+														<input size="1" type="email" class="elementor-field elementor-size-sm  elementor-field-textual" name="email" id="email" placeholder="Email qeyd edin" required>
+													</div>
+													<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+														<label for="form-field-message" class="elementor-field-label">
+															Mesajınız
+														</label>
+														<textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="message" rows="5" placeholder="Mesajınızı qeyd edin" required></textarea>
+													</div>
+													<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+														<button class="elementor-button elementor-size-sm" type="submit">
+                                                            Göndər
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4f54f91 elementor-invisible" data-id="4f54f91" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-09bdae2 elementor-widget elementor-widget-google_maps" data-id="09bdae2" data-element_type="widget" data-widget_type="google_maps.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-custom-embed">
+												<iframe loading="lazy"
+														data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.98946173963!2d49.85662227471833!3d40.414705755764544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087fef0e167f9%3A0x2d47dbedc1eea9e7!2sChinar%20Park!5e1!3m2!1sen!2saz!4v1739649445595!5m2!1sen!2saz"
+														title="London Eye, London, United Kingdom"
+														aria-label="London Eye, London, United Kingdom"
+														src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" data-load-mode="1"></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,771 @@
+﻿<div data-elementor-type="header" data-elementor-id="35" class="elementor elementor-35 elementor-location-header" data-elementor-post-type="elementor_library">
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-e6c4610 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e6c4610" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-04a1c9e" data-id="04a1c9e" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-f3be67b elementor-widget elementor-widget-image" data-id="f3be67b" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<a asp-controller="home" asp-action="index">
+								<img title="logo" alt="logo" loading="lazy" src="~/wp-content/uploads/sites/17/elementor/thumbs/logo.png" class="lazyload logo" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0360281" data-id="0360281" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-70db06e elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="70db06e" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-angle-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+						<div class="elementor-widget-container">
+							<nav aria-label="Menu" style="display:block;" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+								<ul id="menu-1-70db06e" class="elementor-nav-menu" style="justify-content: space-between; display: flex; padding-left: 200px;">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item">Əsas Səhifə</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18">
+										<a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layihələrimiz</a>
+										<ul class="sub-menu elementor-nav-menu--dropdown">
+											@foreach (var item in Model.Project)
+											{
+												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="@Url.Action("Detail", "Services", new { id = item.Id })" class="elementor-sub-item" tabindex="-1">@item.TitleAz</a></li>
+
+											}
+										</ul>
+									</li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a asp-controller="about" asp-action="index" class="elementor-item elementor-item-active">Haqqımızda</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item">Əlaqə</a></li>
+								</ul>
+							</nav>
+							<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+								<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open  ti-menu"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close  ti-close"></i>			<span class="elementor-screen-only">Menu</span>
+							</div>
+							<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+								<ul id="menu-2-70db06e" class="elementor-nav-menu">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item" tabindex="-1">Əsas Səhifə</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a asp-controller="contact" asp-action="index" class="elementor-item elementor-item-active" tabindex="-1">Haqqımızda</a></li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18">
+										<a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layihələrimiz</a>
+										<ul class="sub-menu elementor-nav-menu--dropdown">
+											@foreach (var item in Model.Project)
+											{
+												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="@Url.Action("Detail", "Services", new { id = item.Id })" class="elementor-sub-item" tabindex="-1">@item.TitleAz</a></li>
+											}
+										</ul>
+									</li>
+									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item" tabindex="-1">Əlaqə</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c9c8021 elementor-hidden-mobile" data-id="c9c8021" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-e0110eb elementor-align-right elementor-widget elementor-widget-button" data-id="e0110eb" data-element_type="widget" data-widget_type="button.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-button-wrapper">
+								<a class="elementor-button elementor-button-link elementor-size-sm" asp-controller="contact" asp-action="index">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Bizimlə əlaqə yarat</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div data-elementor-type="wp-post" data-elementor-id="698" class="elementor elementor-698" data-elementor-post-type="envato_tk_templates">
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-4f71568 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="4f71568" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1624c11" data-id="1624c11" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-f347075 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f347075" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-background-overlay"></div>
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dca5c67" data-id="dca5c67" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-6a79988 elementor-invisible elementor-widget elementor-widget-heading" data-id="6a79988" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h1 class="elementor-heading-title elementor-size-default">Haqqımızda</h1>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-162d294 elementor-invisible elementor-widget elementor-widget-heading" data-id="162d294" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h4 class="elementor-heading-title elementor-size-default">
+												Quality work from dedicated professionals.
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-9f29970 elementor-section-content-middle elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9f29970" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-background-overlay"></div>
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bc97fdd" data-id="bc97fdd" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-f90a7ac elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f90a7ac" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ec47a4f elementor-invisible" data-id="ec47a4f" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-2a7a13c elementor-widget elementor-widget-image" data-id="2a7a13c" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img fetchpriority="high" decoding="async" width="1280" height="852" src="../../wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime.jpg" class="attachment-full size-full wp-image-96" alt="Reading the plan. Man is working on the construction site at daytime" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime-300x200.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime-1024x681.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime-768x511.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime-1536x1022.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/reading-the-plan-man-is-working-on-the-construction-site-at-daytime-800x532.jpg 800w" sizes="(max-width: 1280px) 100vw, 1280px" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-67f47ea elementor-invisible" data-id="67f47ea" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-02d9cad elementor-widget elementor-widget-image" data-id="02d9cad" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img decoding="async" width="1280" height="853" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine.jpg" class="attachment-full size-full wp-image-87 lazyload" alt="Young busy worker of factory scrolling in tablet in construction machine" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-300x200.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-1024x682.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-768x512.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-1536x1024.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-800x533.jpg 800w" data-sizes="(max-width: 1280px) 100vw, 1280px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1280px; --smush-placeholder-aspect-ratio: 1280/853;" /><noscript><img decoding="async" width="1280" height="853" src="../../wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine.jpg" class="attachment-full size-full wp-image-87" alt="Young busy worker of factory scrolling in tablet in construction machine" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-300x200.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-1024x682.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-768x512.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-1536x1024.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/young-busy-worker-of-factory-scrolling-in-tablet-in-construction-machine-800x533.jpg 800w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-0ba101a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0ba101a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-fe82c53 elementor-invisible" data-id="fe82c53" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-bf47489 elementor-widget elementor-widget-image" data-id="bf47489" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img decoding="async" width="1280" height="640" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table.jpg" class="attachment-full size-full wp-image-85 lazyload" alt="Team construction engineers working at construction site with blueprint on table" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-300x150.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-1024x512.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-768x384.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-1536x768.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-800x400.jpg 800w" data-sizes="(max-width: 1280px) 100vw, 1280px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1280px; --smush-placeholder-aspect-ratio: 1280/640;" /><noscript><img decoding="async" width="1280" height="640" src="../../wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table.jpg" class="attachment-full size-full wp-image-85" alt="Team construction engineers working at construction site with blueprint on table" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-300x150.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-1024x512.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-768x384.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-1536x768.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/team-construction-engineers-working-at-construction-site-with-blueprint-on-table-800x400.jpg 800w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5b8a623 elementor-invisible" data-id="5b8a623" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-5449d96 elementor-widget elementor-widget-image" data-id="5449d96" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img loading="lazy" decoding="async" width="1280" height="854" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site-.jpg" class="attachment-full size-full wp-image-272 lazyload" alt="Female construction inspector examining construction site." data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site-.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--300x200.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--1024x683.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--768x512.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--1536x1025.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--800x534.jpg 800w" data-sizes="(max-width: 1280px) 100vw, 1280px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1280px; --smush-placeholder-aspect-ratio: 1280/854;" /><noscript><img loading="lazy" decoding="async" width="1280" height="854" src="../../wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site-.jpg" class="attachment-full size-full wp-image-272" alt="Female construction inspector examining construction site." srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site-.jpg 1280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--300x200.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--1024x683.jpg 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--768x512.jpg 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--1536x1025.jpg 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/female-construction-inspector-examining-construction-site--800x534.jpg 800w" sizes="(max-width: 1280px) 100vw, 1280px" /></noscript>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="elementor-element elementor-element-433386d elementor-cta--skin-cover elementor-cta--valign-middle elementor-widget__width-initial elementor-absolute elementor-invisible elementor-widget elementor-widget-call-to-action" data-id="433386d" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;bounceIn&quot;}" data-widget_type="call-to-action.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-cta">
+								<div class="elementor-cta__bg-wrapper">
+									<div class="elementor-cta__bg elementor-bg" style="background-image: url();" role="img" aria-label=""></div>
+									<div class="elementor-cta__bg-overlay"></div>
+								</div>
+								<div class="elementor-cta__content">
+
+									<div class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+										25+
+									</div>
+
+									<div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+										Years of Experience
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ac8a35a elementor-invisible" data-id="ac8a35a" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-a489620 elementor-widget elementor-widget-heading" data-id="a489620" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-widget-container">
+							<h6 class="elementor-heading-title elementor-size-default">Who we are</h6>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-0d05875 elementor-widget elementor-widget-heading" data-id="0d05875" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-widget-container">
+							<h2 class="elementor-heading-title elementor-size-default">The earth is our foundation, the future is our ambition.</h2>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-1df1375 elementor-widget elementor-widget-text-editor" data-id="1df1375" data-element_type="widget" data-widget_type="text-editor.default">
+						<div class="elementor-widget-container">
+							<p>Tristique mi orci tellus consectetuer finibus massa penatibus vestibulum ac. Orci nostra sociosqu pharetra etiam sed venenatis. Elit hendrerit conubia pulvinar placerat nulla tristique.</p>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-6ee50e3 elementor-widget elementor-widget-button" data-id="6ee50e3" data-element_type="widget" data-widget_type="button.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-button-wrapper">
+								<a class="elementor-button elementor-button-link elementor-size-md" href="#">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Learn more</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-f82c684 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f82c684" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cc4d302 elementor-invisible" data-id="cc4d302" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-c0f6c3d elementor-widget elementor-widget-heading" data-id="c0f6c3d" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-widget-container">
+							<h6 class="elementor-heading-title elementor-size-default">Our Value</h6>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-b5201b9 elementor-widget elementor-widget-heading" data-id="b5201b9" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-widget-container">
+							<h2 class="elementor-heading-title elementor-size-default">Quality work from dedicated professionals.</h2>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-64a14b2 elementor-widget elementor-widget-text-editor" data-id="64a14b2" data-element_type="widget" data-widget_type="text-editor.default">
+						<div class="elementor-widget-container">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-274ceef elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="274ceef" data-element_type="widget" data-widget_type="divider.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-divider">
+								<span class="elementor-divider-separator">
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-502093f" data-id="502093f" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-f97601d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f97601d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-03af6cc elementor-invisible" data-id="03af6cc" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInDown&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-6ca8886 elementor-view-stacked elementor-shape-square elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="6ca8886" data-element_type="widget" data-widget_type="icon-box.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-icon-box-wrapper">
+
+												<div class="elementor-icon-box-icon">
+													<span class="elementor-icon elementor-animation-">
+														<i aria-hidden="true" class="icon icon-Helmet"></i>
+													</span>
+												</div>
+
+												<div class="elementor-icon-box-content">
+
+													<div class="elementor-icon-box-title">
+														<span>
+															Our Vision
+														</span>
+													</div>
+
+													<p class="elementor-icon-box-description">
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+													</p>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c638695 elementor-invisible" data-id="c638695" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-c22f967 elementor-view-stacked elementor-shape-square elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="c22f967" data-element_type="widget" data-widget_type="icon-box.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-icon-box-wrapper">
+
+												<div class="elementor-icon-box-icon">
+													<span class="elementor-icon elementor-animation-">
+														<i aria-hidden="true" class="icon icon-Mechanic"></i>
+													</span>
+												</div>
+
+												<div class="elementor-icon-box-content">
+
+													<div class="elementor-icon-box-title">
+														<span>
+															Our Mission
+														</span>
+													</div>
+
+													<p class="elementor-icon-box-description">
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+													</p>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-1787d55 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1787d55" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-background-overlay"></div>
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f0ccb5b" data-id="f0ccb5b" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-8e18267 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8e18267" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d1b2d54 elementor-invisible" data-id="d1b2d54" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-dd60836 elementor-widget elementor-widget-heading" data-id="dd60836" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h6 class="elementor-heading-title elementor-size-default">What we do</h6>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-c123495 elementor-widget elementor-widget-heading" data-id="c123495" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h2 class="elementor-heading-title elementor-size-default">Leading the industry in quality, service, and efficiency.</h2>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-60dca23 elementor-widget elementor-widget-text-editor" data-id="60dca23" data-element_type="widget" data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-5c6db2b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5c6db2b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-40589cf elementor-invisible" data-id="40589cf" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-b019f55 elementor-cta--skin-classic elementor-animated-content elementor-bg-transform elementor-bg-transform-zoom-in elementor-widget elementor-widget-call-to-action" data-id="b019f55" data-element_type="widget" data-widget_type="call-to-action.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-cta">
+												<div class="elementor-cta__bg-wrapper">
+													<div class="elementor-cta__bg elementor-bg lazyload" style="background-image:inherit;" role="img" aria-label="Residential Building Wooden Construction Job" data-bg-image="url(https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/residential-building-wooden-construction-job.jpg)"></div>
+													<div class="elementor-cta__bg-overlay"></div>
+												</div>
+												<div class="elementor-cta__content">
+
+													<div class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+														Residential Developments
+													</div>
+
+													<div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+														Purus maecenas quis feugiat et litora sagittis cras lectus semper sodales commodo nisi morbi facilisis
+													</div>
+
+													<div class="elementor-cta__button-wrapper elementor-cta__content-item elementor-content-item ">
+														<a class="elementor-cta__button elementor-button elementor-size-" href="#">
+															Learn more
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e37488f elementor-invisible" data-id="e37488f" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-2b43c92 elementor-cta--skin-classic elementor-animated-content elementor-bg-transform elementor-bg-transform-zoom-in elementor-widget elementor-widget-call-to-action" data-id="2b43c92" data-element_type="widget" data-widget_type="call-to-action.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-cta">
+												<div class="elementor-cta__bg-wrapper">
+													<div class="elementor-cta__bg elementor-bg lazyload" style="background-image:inherit;" role="img" aria-label="Construction Business Concept" data-bg-image="url(https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/construction-business-concept.jpg)"></div>
+													<div class="elementor-cta__bg-overlay"></div>
+												</div>
+												<div class="elementor-cta__content">
+
+													<div class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+														Commercial Developments
+													</div>
+
+													<div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+														Purus maecenas quis feugiat et litora sagittis cras lectus semper sodales commodo nisi morbi facilisis
+													</div>
+
+													<div class="elementor-cta__button-wrapper elementor-cta__content-item elementor-content-item ">
+														<a class="elementor-cta__button elementor-button elementor-size-" href="#">
+															Learn more
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-bfac64f elementor-invisible" data-id="bfac64f" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:300}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-7810597 elementor-cta--skin-classic elementor-animated-content elementor-bg-transform elementor-bg-transform-zoom-in elementor-widget elementor-widget-call-to-action" data-id="7810597" data-element_type="widget" data-widget_type="call-to-action.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-cta">
+												<div class="elementor-cta__bg-wrapper">
+													<div class="elementor-cta__bg elementor-bg lazyload" style="background-image:inherit;" role="img" aria-label="tower crane" data-bg-image="url(https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/tower-crane.jpg)"></div>
+													<div class="elementor-cta__bg-overlay"></div>
+												</div>
+												<div class="elementor-cta__content">
+
+													<div class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+														Public Facility Developments
+													</div>
+
+													<div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+														Purus maecenas quis feugiat et litora sagittis cras lectus semper sodales commodo nisi morbi facilisis
+													</div>
+
+													<div class="elementor-cta__button-wrapper elementor-cta__content-item elementor-content-item ">
+														<a class="elementor-cta__button elementor-button elementor-size-" href="#">
+															Learn more
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-0f54858 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0f54858" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e4d3d6e" data-id="e4d3d6e" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-98a0fee elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="98a0fee" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-bd1dad8 elementor-invisible" data-id="bd1dad8" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-69adf29 elementor-widget elementor-widget-heading" data-id="69adf29" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h6 class="elementor-heading-title elementor-size-default">Meet our team</h6>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-084615b elementor-widget elementor-widget-heading" data-id="084615b" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h2 class="elementor-heading-title elementor-size-default">Teamwork makes the dream work.</h2>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-e19d730 elementor-widget elementor-widget-text-editor" data-id="e19d730" data-element_type="widget" data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-a881709 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="a881709" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:200}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4bdd358" data-id="4bdd358" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-d567566 elementor-widget elementor-widget-image" data-id="d567566" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img loading="lazy" decoding="async" width="400" height="400" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4.jpg" class="attachment-large size-large wp-image-355 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4-150x150.jpg 150w" data-sizes="(max-width: 400px) 100vw, 400px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 400px; --smush-placeholder-aspect-ratio: 400/400;" /><noscript><img loading="lazy" decoding="async" width="400" height="400" src="../../wp-content/uploads/sites/17/2023/03/img__0004_Layer-4.jpg" class="attachment-large size-large wp-image-355" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0004_Layer-4-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" /></noscript>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-20220f7 elementor-shape-square elementor-grid-1 elementor-widget__width-auto elementor-absolute e-grid-align-center elementor-invisible elementor-widget elementor-widget-social-icons" data-id="20220f7" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="social-icons.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-social-icons-wrapper elementor-grid">
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-b5d726d" target="_blank">
+														<span class="elementor-screen-only">Facebook-f</span>
+														<i class="fab fa-facebook-f"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-a009ff1" target="_blank">
+														<span class="elementor-screen-only">Instagram</span>
+														<i class="fab fa-instagram"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-animation-pop elementor-repeater-item-1be25c1" target="_blank">
+														<span class="elementor-screen-only">Linkedin-in</span>
+														<i class="fab fa-linkedin-in"></i>
+													</a>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-3bad4d9 elementor-widget elementor-widget-icon-box" data-id="3bad4d9" data-element_type="widget" data-widget_type="icon-box.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-icon-box-wrapper">
+
+
+												<div class="elementor-icon-box-content">
+
+													<div class="elementor-icon-box-title">
+														<span>
+															Josh Howard
+														</span>
+													</div>
+
+													<p class="elementor-icon-box-description">
+														Co-Founder
+													</p>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-8929a12" data-id="8929a12" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-485177f elementor-widget elementor-widget-image" data-id="485177f" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img loading="lazy" decoding="async" width="400" height="400" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8.jpg" class="attachment-large size-large wp-image-351 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8-150x150.jpg 150w" data-sizes="(max-width: 400px) 100vw, 400px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 400px; --smush-placeholder-aspect-ratio: 400/400;" /><noscript><img loading="lazy" decoding="async" width="400" height="400" src="../../wp-content/uploads/sites/17/2023/03/img__0000_Layer-8.jpg" class="attachment-large size-large wp-image-351" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0000_Layer-8-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" /></noscript>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-44b22b0 elementor-shape-square elementor-grid-1 elementor-widget__width-auto elementor-absolute e-grid-align-center elementor-invisible elementor-widget elementor-widget-social-icons" data-id="44b22b0" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="social-icons.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-social-icons-wrapper elementor-grid">
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-b5d726d" target="_blank">
+														<span class="elementor-screen-only">Facebook-f</span>
+														<i class="fab fa-facebook-f"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-a009ff1" target="_blank">
+														<span class="elementor-screen-only">Instagram</span>
+														<i class="fab fa-instagram"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-animation-pop elementor-repeater-item-1be25c1" target="_blank">
+														<span class="elementor-screen-only">Linkedin-in</span>
+														<i class="fab fa-linkedin-in"></i>
+													</a>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-88e7e70 elementor-widget elementor-widget-icon-box" data-id="88e7e70" data-element_type="widget" data-widget_type="icon-box.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-icon-box-wrapper">
+
+
+												<div class="elementor-icon-box-content">
+
+													<div class="elementor-icon-box-title">
+														<span>
+															Ellis Gardner
+														</span>
+													</div>
+
+													<p class="elementor-icon-box-description">
+														Business Manager
+													</p>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-a6bff4d" data-id="a6bff4d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-a53eaf1 elementor-widget elementor-widget-image" data-id="a53eaf1" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img loading="lazy" decoding="async" width="400" height="400" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1.jpg" class="attachment-large size-large wp-image-358 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1-150x150.jpg 150w" data-sizes="(max-width: 400px) 100vw, 400px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 400px; --smush-placeholder-aspect-ratio: 400/400;" /><noscript><img loading="lazy" decoding="async" width="400" height="400" src="../../wp-content/uploads/sites/17/2023/03/img__0007_Layer-1.jpg" class="attachment-large size-large wp-image-358" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0007_Layer-1-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" /></noscript>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-30f6306 elementor-shape-square elementor-grid-1 elementor-widget__width-auto elementor-absolute e-grid-align-center elementor-invisible elementor-widget elementor-widget-social-icons" data-id="30f6306" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="social-icons.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-social-icons-wrapper elementor-grid">
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-b5d726d" target="_blank">
+														<span class="elementor-screen-only">Facebook-f</span>
+														<i class="fab fa-facebook-f"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-a009ff1" target="_blank">
+														<span class="elementor-screen-only">Instagram</span>
+														<i class="fab fa-instagram"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-animation-pop elementor-repeater-item-1be25c1" target="_blank">
+														<span class="elementor-screen-only">Linkedin-in</span>
+														<i class="fab fa-linkedin-in"></i>
+													</a>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-9050740 elementor-widget elementor-widget-icon-box" data-id="9050740" data-element_type="widget" data-widget_type="icon-box.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-icon-box-wrapper">
+
+
+												<div class="elementor-icon-box-content">
+
+													<div class="elementor-icon-box-title">
+														<span>
+															Stefan Galloway
+														</span>
+													</div>
+
+													<p class="elementor-icon-box-description">
+														Architecture
+													</p>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-5aed17f" data-id="5aed17f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-2359abd elementor-widget elementor-widget-image" data-id="2359abd" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img loading="lazy" decoding="async" width="400" height="400" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2.jpg" class="attachment-large size-large wp-image-357 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2-150x150.jpg 150w" data-sizes="(max-width: 400px) 100vw, 400px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 400px; --smush-placeholder-aspect-ratio: 400/400;" /><noscript><img loading="lazy" decoding="async" width="400" height="400" src="../../wp-content/uploads/sites/17/2023/03/img__0006_Layer-2.jpg" class="attachment-large size-large wp-image-357" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2.jpg 400w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2-300x300.jpg 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/img__0006_Layer-2-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" /></noscript>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-4245e67 elementor-shape-square elementor-grid-1 elementor-widget__width-auto elementor-absolute e-grid-align-center elementor-invisible elementor-widget elementor-widget-social-icons" data-id="4245e67" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="social-icons.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-social-icons-wrapper elementor-grid">
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-b5d726d" target="_blank">
+														<span class="elementor-screen-only">Facebook-f</span>
+														<i class="fab fa-facebook-f"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-a009ff1" target="_blank">
+														<span class="elementor-screen-only">Instagram</span>
+														<i class="fab fa-instagram"></i>
+													</a>
+												</span>
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-animation-pop elementor-repeater-item-1be25c1" target="_blank">
+														<span class="elementor-screen-only">Linkedin-in</span>
+														<i class="fab fa-linkedin-in"></i>
+													</a>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-3890c4b elementor-widget elementor-widget-icon-box" data-id="3890c4b" data-element_type="widget" data-widget_type="icon-box.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-icon-box-wrapper">
+
+
+												<div class="elementor-icon-box-content">
+
+													<div class="elementor-icon-box-title">
+														<span>
+															Ayana Acosta
+														</span>
+													</div>
+
+													<p class="elementor-icon-box-description">
+														Marketing Manager
+													</p>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-2a353d3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="2a353d3" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:200}">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a6fff4a" data-id="a6fff4a" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<section class="elementor-section elementor-inner-section elementor-element elementor-element-1c99db5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1c99db5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-55a950c" data-id="55a950c" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-7d64e69 elementor-widget elementor-widget-heading" data-id="7d64e69" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<h2 class="elementor-heading-title elementor-size-default">Trusted by 25,000+ world-class brands and organizations of all sizes.</h2>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-5d61ca2 elementor-widget elementor-widget-text-editor" data-id="5d61ca2" data-element_type="widget" data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="elementor-element elementor-element-3da056d elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="3da056d" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2333" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9.png" class="attachment-full size-full wp-image-834 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9.png 2333w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-300x77.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-1024x263.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-768x198.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-1536x395.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-2048x527.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-800x206.png 800w" data-sizes="(max-width: 2333px) 100vw, 2333px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2333px; --smush-placeholder-aspect-ratio: 2333/600;" /><noscript><img loading="lazy" decoding="async" width="2333" height="600" src="../../wp-content/uploads/sites/17/2023/03/velocity-9.png" class="attachment-full size-full wp-image-834" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9.png 2333w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-300x77.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-1024x263.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-768x198.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-1536x395.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-2048x527.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/velocity-9-800x206.png 800w" sizes="(max-width: 2333px) 100vw, 2333px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-4289968 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="4289968" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2340" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2.png" class="attachment-full size-full wp-image-833 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2.png 2340w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-300x77.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-1024x263.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-768x197.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-1536x394.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-2048x525.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-800x205.png 800w" data-sizes="(max-width: 2340px) 100vw, 2340px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2340px; --smush-placeholder-aspect-ratio: 2340/600;" /><noscript><img loading="lazy" decoding="async" width="2340" height="600" src="../../wp-content/uploads/sites/17/2023/03/utosia-2.png" class="attachment-full size-full wp-image-833" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2.png 2340w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-300x77.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-1024x263.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-768x197.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-1536x394.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-2048x525.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/utosia-2-800x205.png 800w" sizes="(max-width: 2340px) 100vw, 2340px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-62320fc elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="62320fc" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="1870" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic.png" class="attachment-full size-full wp-image-832 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic.png 1870w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-300x96.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-1024x329.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-768x246.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-1536x493.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-800x257.png 800w" data-sizes="(max-width: 1870px) 100vw, 1870px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 1870px; --smush-placeholder-aspect-ratio: 1870/600;" /><noscript><img loading="lazy" decoding="async" width="1870" height="600" src="../../wp-content/uploads/sites/17/2023/03/solaytic.png" class="attachment-full size-full wp-image-832" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic.png 1870w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-300x96.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-1024x329.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-768x246.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-1536x493.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/solaytic-800x257.png 800w" sizes="(max-width: 1870px) 100vw, 1870px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-ae2ba1b elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="ae2ba1b" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2100" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab.png" class="attachment-full size-full wp-image-831 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab.png 2100w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-300x86.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-1024x293.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-768x219.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-1536x439.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-2048x585.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-800x229.png 800w" data-sizes="(max-width: 2100px) 100vw, 2100px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2100px; --smush-placeholder-aspect-ratio: 2100/600;" /><noscript><img loading="lazy" decoding="async" width="2100" height="600" src="../../wp-content/uploads/sites/17/2023/03/hex-lab.png" class="attachment-full size-full wp-image-831" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab.png 2100w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-300x86.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-1024x293.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-768x219.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-1536x439.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-2048x585.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/hex-lab-800x229.png 800w" sizes="(max-width: 2100px) 100vw, 2100px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-e26298d elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="e26298d" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2580" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline.png" class="attachment-full size-full wp-image-830 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline.png 2580w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-300x70.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-1024x238.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-768x179.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-1536x357.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-2048x476.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-800x186.png 800w" data-sizes="(max-width: 2580px) 100vw, 2580px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2580px; --smush-placeholder-aspect-ratio: 2580/600;" /><noscript><img loading="lazy" decoding="async" width="2580" height="600" src="../../wp-content/uploads/sites/17/2023/03/goldline.png" class="attachment-full size-full wp-image-830" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline.png 2580w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-300x70.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-1024x238.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-768x179.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-1536x357.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-2048x476.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/goldline-800x186.png 800w" sizes="(max-width: 2580px) 100vw, 2580px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-91950fb elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="91950fb" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2566" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub.png" class="attachment-full size-full wp-image-829 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub.png 2566w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-300x70.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-1024x239.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-768x180.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-1536x359.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-2048x479.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-800x187.png 800w" data-sizes="(max-width: 2566px) 100vw, 2566px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2566px; --smush-placeholder-aspect-ratio: 2566/600;" /><noscript><img loading="lazy" decoding="async" width="2566" height="600" src="../../wp-content/uploads/sites/17/2023/03/fox-hub.png" class="attachment-full size-full wp-image-829" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub.png 2566w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-300x70.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-1024x239.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-768x180.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-1536x359.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-2048x479.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/fox-hub-800x187.png 800w" sizes="(max-width: 2566px) 100vw, 2566px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-d08bd28 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="d08bd28" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2520" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0.png" class="attachment-full size-full wp-image-828 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0.png 2520w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-300x71.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-1024x244.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-768x183.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-1536x366.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-2048x488.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-800x190.png 800w" data-sizes="(max-width: 2520px) 100vw, 2520px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2520px; --smush-placeholder-aspect-ratio: 2520/600;" /><noscript><img loading="lazy" decoding="async" width="2520" height="600" src="../../wp-content/uploads/sites/17/2023/03/earth-2.0.png" class="attachment-full size-full wp-image-828" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0.png 2520w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-300x71.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-1024x244.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-768x183.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-1536x366.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-2048x488.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/earth-2.0-800x190.png 800w" sizes="(max-width: 2520px) 100vw, 2520px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-afc2a27 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="afc2a27" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2280" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab.png" class="attachment-full size-full wp-image-827 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab.png 2280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-300x79.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-1024x269.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-768x202.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-1536x404.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-2048x539.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-800x211.png 800w" data-sizes="(max-width: 2280px) 100vw, 2280px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2280px; --smush-placeholder-aspect-ratio: 2280/600;" /><noscript><img loading="lazy" decoding="async" width="2280" height="600" src="../../wp-content/uploads/sites/17/2023/03/code-lab.png" class="attachment-full size-full wp-image-827" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab.png 2280w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-300x79.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-1024x269.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-768x202.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-1536x404.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-2048x539.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/code-lab-800x211.png 800w" sizes="(max-width: 2280px) 100vw, 2280px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-f950914 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="f950914" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2010" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven.png" class="attachment-full size-full wp-image-826 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven.png 2010w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-300x90.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-1024x306.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-768x229.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-1536x459.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-800x239.png 800w" data-sizes="(max-width: 2010px) 100vw, 2010px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2010px; --smush-placeholder-aspect-ratio: 2010/600;" /><noscript><img loading="lazy" decoding="async" width="2010" height="600" src="../../wp-content/uploads/sites/17/2023/03/aven.png" class="attachment-full size-full wp-image-826" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven.png 2010w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-300x90.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-1024x306.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-768x229.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-1536x459.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/aven-800x239.png 800w" sizes="(max-width: 2010px) 100vw, 2010px" /></noscript>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-9edc5ec elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="9edc5ec" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img loading="lazy" decoding="async" width="2558" height="600" data-src="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia.png" class="attachment-full size-full wp-image-825 lazyload" alt="" data-srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia.png 2558w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-300x70.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-1024x240.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-768x180.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-1536x360.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-2048x480.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-800x188.png 800w" data-sizes="(max-width: 2558px) 100vw, 2558px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="--smush-placeholder-width: 2558px; --smush-placeholder-aspect-ratio: 2558/600;" /><noscript><img loading="lazy" decoding="async" width="2558" height="600" src="../../wp-content/uploads/sites/17/2023/03/asgardia.png" class="attachment-full size-full wp-image-825" alt="" srcset="https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia.png 2558w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-300x70.png 300w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-1024x240.png 1024w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-768x180.png 768w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-1536x360.png 1536w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-2048x480.png 2048w, https://web.moxcreative.com/builderhaus/wp-content/uploads/sites/17/2023/03/asgardia-800x188.png 800w" sizes="(max-width: 2558px) 100vw, 2558px" /></noscript>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

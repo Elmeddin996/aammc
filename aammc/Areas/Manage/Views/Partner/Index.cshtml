@@ -1,4 +1,4 @@
-﻿@model PaginatedList<Equipment>
+﻿@model PaginatedList<Partner>
 @{
     ViewData["Title"] = "Index";
     int order = 0;
@@ -6,7 +6,7 @@
 
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <h1>Texnikalar</h1>
+        <h1>Partnyorlar</h1>
         <div class="row">
             <div class="col-md-8">
                 <form asp-action="index" method="get">
@@ -42,8 +42,8 @@
                     order++;
                     <tr>
                         <th scope="row">@order</th>
-                        <td>@item.NameAz</td>
-                        <td><img width="50" src="~/uploads/equipments/@item.Image" /></td>
+                        <td>@item.Name</td>
+                        <td><img width="50" src="~/uploads/partners/@item.Image" /></td>
 
                         <td>
                             <a class="btn btn-warning" asp-action="edit" asp-route-id="@item.Id">Edit</a>

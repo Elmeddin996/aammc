@@ -88,17 +88,17 @@
                                  data-id="eab4846"
                                  data-element_type="section"
                                  data-settings='{
-                                 "background_background": "slideshow",
-                                 "background_slideshow_gallery": [
-                                 {"id": 1, "url": "/uploads/sliders/@item.Image"},
-                                 {"id": 2, "url": "/uploads/sliders/@item.Image2"},
-                                 {"id": 3, "url": "/uploads/sliders/@item.Image3"}
-                                  ],
-                                  "background_slideshow_loop": "yes",
-                                  "background_slideshow_slide_duration": 5000,
-                                  "background_slideshow_slide_transition": "fade",
-                                  "background_slideshow_transition_duration": 500
-                                  }'>
+                                     "background_background": "slideshow",
+                                     "background_slideshow_gallery": [
+                                     {"id": 1, "url": "/uploads/sliders/@item.Image"},
+                                     {"id": 2, "url": "/uploads/sliders/@item.Image2"},
+                                     {"id": 3, "url": "/uploads/sliders/@item.Image3"}
+                                      ],
+                                      "background_slideshow_loop": "yes",
+                                      "background_slideshow_slide_duration": 5000,
+                                      "background_slideshow_slide_transition": "fade",
+                                      "background_slideshow_transition_duration": 500
+                                      }'>
                             <div class="elementor-background-overlay"></div>
                             <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b7bcb25" data-id="b7bcb25" data-element_type="column">
@@ -197,6 +197,43 @@
             </div>
         </div>
     </section>
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-b931322 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="b931322" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:200}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ef09ba6" data-id="ef09ba6" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-02d3b8a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="02d3b8a" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3150a3b" data-id="3150a3b" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-eca4edb elementor-widget elementor-widget-heading" data-id="eca4edb" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Partnyorlarımız</h2>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    @foreach (var item in Model.Partners)
+                    {
+                        <div class="elementor-element elementor-element-729ee09 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="729ee09" data-element_type="widget" data-widget_type="image.default">
+                            <div class="elementor-widget-container">
+                                <img style="
+                                   height: 80px;
+                                 width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;"
+                                     src="~/uploads/partners/@item.Image" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="elementor-section elementor-top-section elementor-element elementor-element-b2653d3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b2653d3" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
         <div class="elementor-background-overlay"></div>
         <div class="elementor-container elementor-column-gap-default">

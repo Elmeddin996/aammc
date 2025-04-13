@@ -8,6 +8,7 @@ namespace aammc.ViewModels
 		public List<Project> Project { get; set; }
 		public List<Equipment> Equipment { get; set; }
 		public List<Slider> Slider { get; set; }	
+		public List<Partner> Partners { get; set; }
 
-	}
+    }
 }

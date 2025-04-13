@@ -15,6 +15,7 @@ namespace aammc.DAL
         public DbSet<Project> Projects { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
 		public DbSet<AppUser> AppUsers { get; set; }
+		public DbSet<Partner> Partners { get; set; }
 
 
 

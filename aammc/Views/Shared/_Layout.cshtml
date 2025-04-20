@@ -1,12 +1,19 @@
-﻿<!doctype html>
+﻿@using aammc.Services
+@inject LayoutService _layoutService
+
+@{
+    var settings = _layoutService.GetSettings();
+    var project = _layoutService.GetProject();
+}
+
+<!doctype html>
 <html lang="en-US">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>Homepage &#8211; builderhaus</title>
+    <title>AAMMC</title>
     <meta name='robots' content='max-image-preview:large' />
     <style>        img:is([sizes="auto" i], [sizes^="auto," i]) {
             contain-intrinsic-size: 3000px 1500px
@@ -876,7 +883,6 @@
 <body class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-1080 elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-1080">
 
 
-    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     @RenderBody()
 
     <div data-elementor-type="footer" data-elementor-id="47" class="elementor elementor-47 elementor-location-footer" data-elementor-post-type="elementor_library">
@@ -886,53 +892,23 @@
                 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7e0c53c" data-id="7e0c53c" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
                         <section class="elementor-section elementor-inner-section elementor-element elementor-element-45d5f67 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="45d5f67" data-element_type="section">
-                            <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-container" style="display:flex; justify-content:space-around;">
                                 <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-44ffe27" data-id="44ffe27" data-element_type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-64c7996 elementor-widget elementor-widget-image" data-id="64c7996" data-element_type="widget" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
-                                                <img  title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" src="~/wp-content/uploads/sites/17/elementor/thumbs/logo.png" class="lazyload" style="--smush-placeholder-width: 242px; --smush-placeholder-aspect-ratio: 242/49;" /><noscript><img src="~/wp-content/uploads/sites/17/elementor/thumbs/logo_builderhaus_w-q35hpxgzk99wueq8uq79n51obb1sgzzh7midvpl7uo.png" title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" /></noscript>
+                                                <img  title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" src="~/wp-content/uploads/sites/17/elementor/thumbs/logo.png" class="lazyload" style="width:150px" /><noscript><img src="~/wp-content/uploads/sites/17/elementor/thumbs/logo_builderhaus_w-q35hpxgzk99wueq8uq79n51obb1sgzzh7midvpl7uo.png" title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" /></noscript>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-8a6fd51 elementor-widget elementor-widget-heading" data-id="8a6fd51" data-element_type="widget" data-widget_type="heading.default">
                                         </div>
-                                        <div class="elementor-element elementor-element-edc1032 elementor-shape-square e-grid-align-tablet-center elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="edc1032" data-element_type="widget" data-widget_type="social-icons.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-social-icons-wrapper elementor-grid">
-                                                    <span class="elementor-grid-item">
-                                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-06d661f" target="_blank">
-                                                            <span class="elementor-screen-only">Facebook-f</span>
-                                                            <i class="fab fa-facebook-f"></i>
-                                                        </a>
-                                                    </span>
-                                                    <span class="elementor-grid-item">
-                                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-pop elementor-repeater-item-128111f" target="_blank">
-                                                            <span class="elementor-screen-only">Twitter</span>
-                                                            <i class="fab fa-twitter"></i>
-                                                        </a>
-                                                    </span>
-                                                    <span class="elementor-grid-item">
-                                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-f6db559" target="_blank">
-                                                            <span class="elementor-screen-only">Instagram</span>
-                                                            <i class="fab fa-instagram"></i>
-                                                        </a>
-                                                    </span>
-                                                    <span class="elementor-grid-item">
-                                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-pop elementor-repeater-item-10d8100" target="_blank">
-                                                            <span class="elementor-screen-only">Youtube</span>
-                                                            <i class="fab fa-youtube"></i>
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-03966ea" data-id="03966ea" data-element_type="column">
+                                <div style="width:50%" class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-03966ea" >
                                     <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-27707e8 elementor-widget elementor-widget-heading" data-id="27707e8" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-element elementor-element-27707e8 elementor-widget elementor-widget-heading" >
                                             <div class="elementor-widget-container">
-                                                <h5 class="elementor-heading-title elementor-size-default">Services</h5>
+                                                <h5 class="elementor-heading-title elementor-size-default">Layihələrimiz</h5>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-a42b886 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="a42b886" data-element_type="widget" data-widget_type="divider.default">
@@ -946,145 +922,42 @@
                                         <div class="elementor-element elementor-element-419fbb9 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="419fbb9" data-element_type="widget" data-widget_type="icon-list.default">
                                             <div class="elementor-widget-container">
                                                 <ul class="elementor-icon-list-items">
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
+                                                   @foreach (var item in project)
+                                                    {
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="#">
 
-                                                            <span class="elementor-icon-list-text">Family House</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
+                                                                <span class="elementor-icon-list-text">@item.TitleAz</span>
+                                                            </a>
+                                                        </li>
 
-                                                            <span class="elementor-icon-list-text">Commercial Building</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Apartment</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Office and Tower</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Public Building</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Sports and Art</span>
-                                                        </a>
-                                                    </li>
+                                                    }
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-514a3f9" data-id="514a3f9" data-element_type="column">
-                                    <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-71f91f4 elementor-widget elementor-widget-heading" data-id="71f91f4" data-element_type="widget" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h5 class="elementor-heading-title elementor-size-default">Company</h5>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-5a01359 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5a01359" data-element_type="widget" data-widget_type="divider.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-divider">
-                                                    <span class="elementor-divider-separator">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-b17a330 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="b17a330" data-element_type="widget" data-widget_type="icon-list.default">
-                                            <div class="elementor-widget-container">
-                                                <ul class="elementor-icon-list-items">
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">About us</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Leadership</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Careers</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Article & News</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Legal Notice</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                <div class="elementor-element elementor-element-edc1032 elementor-shape-square e-grid-align-tablet-center elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="edc1032" data-element_type="widget" data-widget_type="social-icons.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-social-icons-wrapper elementor-grid" style="padding-right: 100px; display: flex; flex-direction:column; align-items:center">
+                                            <span class="elementor-grid-item">
+                                                <a href="https://www.instagram.com" style="width:60px; height:40px; margin-top:30px;" class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-f6db559" target="_blank">
+                                                    <span class="elementor-screen-only">Instagram</span>
+                                                    <i class="fab fa-instagram" style="font-size: xx-large;"></i>
+                                                </a>
+                                            </span>
+                                            <span class="elementor-grid-item">
+                                                <a href="mailto:info@aammc.az" style="width:60px; height:40px; margin-top:30px;" class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pop elementor-repeater-item-f6db559" target="_blank">
+                                                    <span class="elementor-screen-only">Mail</span>
+                                                    <i class="fa fa-envelope" style="font-size: xx-large;"></i>
+                                                </a>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-60e1c95" data-id="60e1c95" data-element_type="column">
-                                    <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-06aed56 elementor-widget elementor-widget-heading" data-id="06aed56" data-element_type="widget" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Newsletter</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-dfdac8f elementor-widget elementor-widget-heading" data-id="dfdac8f" data-element_type="widget" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-heading-title elementor-size-default">Sign up our newsletter to get update information, news and free insight.</div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-b46a9aa elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="b46a9aa" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
-                                            <div class="elementor-widget-container">
-                                                <form class="elementor-form" method="post" name="New Form">
-                                                    <input type="hidden" name="post_id" value="47" />
-                                                    <input type="hidden" name="form_id" value="b46a9aa" />
-                                                    <input type="hidden" name="referer_title" value="Homepage" />
 
-                                                    <input type="hidden" name="queried_id" value="1080" />
-
-                                                    <div class="elementor-form-fields-wrapper elementor-labels-">
-                                                        <div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-                                                            <label for="form-field-email" class="elementor-field-label elementor-screen-only">
-                                                                Email
-                                                            </label>
-                                                            <input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Email" required="required" aria-required="true">
-                                                        </div>
-                                                        <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-                                                            <button class="elementor-button elementor-size-md" type="submit">
-                                                                <span class="elementor-button-content-wrapper">
-                                                                    <span class="elementor-button-icon">
-                                                                        <i aria-hidden="true" class="mdi mdi-email-multiple-outline"></i>
-                                                                    </span>
-                                                                    <span class="elementor-button-text">Sign Up</span>
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+
                         </section>
                         <section class="elementor-section elementor-inner-section elementor-element elementor-element-67c7792 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="67c7792" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-default">
@@ -1092,35 +965,9 @@
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-250b4e2 elementor-widget elementor-widget-heading" data-id="250b4e2" data-element_type="widget" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <div class="elementor-heading-title elementor-size-default">Copyright © 2023 BuilderHaus, All rights reserved. Powered by MoxCreative.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1131265" data-id="1131265" data-element_type="column">
-                                    <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-b10c2c3 elementor-icon-list--layout-inline elementor-align-right elementor-tablet-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="b10c2c3" data-element_type="widget" data-widget_type="icon-list.default">
-                                            <div class="elementor-widget-container">
-                                                <ul class="elementor-icon-list-items elementor-inline-items">
-                                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Terms of use</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Privacy Policy</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                                        <a href="#">
-
-                                                            <span class="elementor-icon-list-text">Cookie Policy</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <div class="elementor-heading-title elementor-size-default">
+                                                    Created by <a href="https://api.whatsapp.com/send?phone=994505481996&text=Salam%2C%20Elmeddin%21">Elmeddin Mirzeyev</a> © 2025
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

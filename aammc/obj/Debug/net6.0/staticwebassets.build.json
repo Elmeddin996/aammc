@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EK22nDSFUYdi/OJxTGE0WbyHb7KpPnoezdprfbb2Zcg=",
+  "Hash": "UB89rEEa7bsCEyvunAfUqfeSTmv/nqAZfyQNhZOk9NY=",
   "Source": "aammc",
   "BasePath": "_content/aammc",
   "Mode": "Default",
@@ -34901,6 +34901,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\11zon_IMG_9782.jpeg"
     },
     {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\aammc\\aammc\\wwwroot\\uploads\\equipments\\79fb7f72-ab58-4098-9bda-b5448deb2fefBuldozer.jpg",
+      "SourceId": "aammc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\aammc\\aammc\\wwwroot\\",
+      "BasePath": "_content/aammc",
+      "RelativePath": "uploads/equipments/79fb7f72-ab58-4098-9bda-b5448deb2fefBuldozer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\equipments\\79fb7f72-ab58-4098-9bda-b5448deb2fefBuldozer.jpg"
+    },
+    {
       "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\aammc\\aammc\\wwwroot\\uploads\\equipments\\a3b33a6a-c3a9-4c4b-b49e-9ebdd3d57dfeIMG_9663.jpg",
       "SourceId": "aammc",
       "SourceType": "Discovered",
@@ -35298,6 +35317,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\sliders\\d5cfc723-81eb-4eac-853d-9d3ffdb25093IMG_9870.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\aammc\\aammc\\wwwroot\\uploads\\transports\\94230b2e-1d1f-4b84-9cda-1294daa27602principal-R380LC-9SH.png",
+      "SourceId": "aammc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\aammc\\aammc\\wwwroot\\",
+      "BasePath": "_content/aammc",
+      "RelativePath": "uploads/transports/94230b2e-1d1f-4b84-9cda-1294daa27602principal-R380LC-9SH.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\transports\\94230b2e-1d1f-4b84-9cda-1294daa27602principal-R380LC-9SH.png"
     },
     {
       "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\aammc\\aammc\\wwwroot\\uploads\\WhatsApp Image 2025-04-19 at 22.40.01.jpeg",

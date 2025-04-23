@@ -21,6 +21,7 @@ namespace aammc.Controllers
                 Settings = _context.Settings.FirstOrDefault(),
                 Project = _context.Projects.ToList(),
                 Equipment = _context.Equipments.ToList(),
+                Transports = _context.Transports.ToList(),
                 Partners = _context.Partners.ToList(),
                 Slider = _context.Sliders.ToList()
             };

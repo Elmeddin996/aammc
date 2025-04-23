@@ -1,5 +1,4 @@
 ﻿@model MenuViewModel
-
 <div data-elementor-type="header" data-elementor-id="35" class="elementor elementor-35 elementor-location-header" data-elementor-post-type="elementor_library">
     <section class="elementor-section elementor-top-section elementor-element elementor-element-e6c4610 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e6c4610" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
         <div class="elementor-container elementor-column-gap-default">
@@ -144,7 +143,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-3bad4b9 elementor-widget elementor-widget-heading" data-id="3bad4b9" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Texnikalarimiz</h2>
+                                            <h2 class="elementor-heading-title elementor-size-default">Texnikalarımız</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -197,6 +196,74 @@
             </div>
         </div>
     </section>
+   
+
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-94f676b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="94f676b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d5513d2" data-id="d5513d2" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-a943d9d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a943d9d" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-df70234 elementor-invisible" data-id="df70234" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-3bad4b9 elementor-widget elementor-widget-heading" data-id="3bad4b9" data-element_type="widget" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Nəqliyyat Və Sərnişindaşıma</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-d9b3abe elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="d9b3abe" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:200}">
+                        <div class="elementor-container elementor-column-gap-default" style="display:flex; flex-wrap:wrap;">
+                            @foreach (var item in Model.Transports)
+                            {
+                                <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-1fd991f" data-id="1fd991f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-0ae92b7 elementor-widget elementor-widget-image" data-id="0ae92b7" data-element_type="widget" data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <img src="~/uploads/transports/@item.Image" style="--smush-placeholder-width: 1280px; --smush-placeholder-aspect-ratio: 1280/854;" />
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-7e4058d elementor-view-stacked elementor-shape-square elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="7e4058d" data-element_type="widget" data-widget_type="icon-box.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-icon-box-wrapper">
+
+                                                    <div class="elementor-icon-box-icon">
+                                                        <span class="elementor-icon elementor-animation-">
+                                                            <i aria-hidden="true" class="icon icon-crane2"></i>
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="elementor-icon-box-content">
+
+                                                        <div class="elementor-icon-box-title">
+                                                            <span>
+                                                                @item.NameAz
+                                                            </span>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            }
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="elementor-section elementor-top-section elementor-element elementor-element-b931322 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="b931322" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:200}">
         <div class="elementor-container elementor-column-gap-default">
             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ef09ba6" data-id="ef09ba6" data-element_type="column">

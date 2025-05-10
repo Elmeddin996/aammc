@@ -17,7 +17,7 @@
 			<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0360281" data-id="0360281" data-element_type="column">
 				<div class="elementor-widget-wrap elementor-element-populated">
 					<div class="elementor-element elementor-element-70db06e elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="70db06e" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-angle-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
-						<div class="elementor-widget-container">
+						<div class="elementor-widget-container mobil-hidden">
 							<nav aria-label="Menu" style="display:block;" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
 								<ul id="menu-1-70db06e" class="elementor-nav-menu" style="justify-content: space-between; display: flex; padding-left: 200px;">
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item">Əsas Səhifə</a></li>
@@ -35,26 +35,28 @@
 									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item elementor-item-active">Əlaqə</a></li>
 								</ul>
 							</nav>
-							<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
-								<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open  ti-menu"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close  ti-close"></i>			<span class="elementor-screen-only">Menu</span>
-							</div>
-							<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-								<ul id="menu-2-70db06e" class="elementor-nav-menu">
-									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item" tabindex="-1">Əsas Səhifə</a></li>
-									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a asp-controller="contact" asp-action="index" class="elementor-item" tabindex="-1">Haqqımızda</a></li>
-									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18">
-										<a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layihələrimiz</a>
-										<ul class="sub-menu elementor-nav-menu--dropdown">
-											@foreach (var item in Model.Project)
-											{
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="@Url.Action("Detail", "Services", new { id = item.Id })" class="elementor-sub-item" tabindex="-1">@item.TitleAz</a></li>
-											}
-										</ul>
-									</li>
-									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Əlaqə</a></li>
-								</ul>
-							</nav>
 						</div>
+						<div class="hamburger" onclick="toggleMenu()">
+							☰
+						</div>
+
+						<!-- Menü -->
+						<ul class="mobile-nav" id="mobileNav">
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a asp-controller="home" asp-action="index" class="elementor-item" tabindex="-1">Əsas Səhifə</a></li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a asp-controller="contact" asp-action="index" class="elementor-item elementor-item-active" tabindex="-1">Haqqımızda</a></li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18">
+								<a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layihələrimiz</a>
+								<ul class="sub-menu elementor-nav-menu--dropdown">
+									@foreach (var item in Model.Project)
+									{
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="@Url.Action("Detail", "Services", new { id = item.Id })" class="elementor-sub-item" tabindex="-1">@item.TitleAz</a></li>
+									}
+								</ul>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-13"><a asp-controller="contact" asp-action="index" aria-current="page" class="elementor-item" tabindex="-1">Əlaqə</a></li>
+
+						</ul>
+					</div>
 					</div>
 				</div>
 			</div>

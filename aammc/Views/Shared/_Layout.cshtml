@@ -916,7 +916,74 @@
                 background-image: none !important;
             }
         }
+
+       /*  @@media only screen and (max-width: 768px) {
+            .elementor-35 .elementor-element.elementor-element-e6c4610 > .elementor-container > .elementor-column > .elementor-widget-wrap {
+                height: 100px;
+            }
+        } */
+        /* Hamburger ikonu */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1001; /* Menüden daha yukarıda */
+            border-radius: 5px;
+        }
+
+        /* Menü kapalıyken */
+        .mobile-nav {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f8f8f8;
+            width: 100%;
+            position: fixed;
+            top: 60px; /* Hamburgerin altından başlasın */
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+            .mobile-nav.open {
+                display: block;
+            }
+
+            .mobile-nav li {
+                border-bottom: 1px solid #ccc;
+            }
+
+                .mobile-nav li a {
+                    display: block;
+                    padding: 18px 20px;
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: #333;
+                }
+
+        /* Sadece mobilde görünür */
+        @@media only screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .mobil-hidden{
+                display:none!important;
+            }
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('open');
+        }
+    </script>
+
 </head>
 <body class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-1080 elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-1080">
 
@@ -935,16 +1002,16 @@
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-64c7996 elementor-widget elementor-widget-image" data-id="64c7996" data-element_type="widget" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
-                                                <img  title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" src="~/wp-content/uploads/sites/17/elementor/thumbs/logo.png" class="lazyload" style="width:150px" /><noscript><img src="~/wp-content/uploads/sites/17/elementor/thumbs/logo_builderhaus_w-q35hpxgzk99wueq8uq79n51obb1sgzzh7midvpl7uo.png" title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" /></noscript>
+                                                <img title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" src="~/wp-content/uploads/sites/17/elementor/thumbs/logo.png" class="lazyload" style="width:150px" /><noscript><img src="~/wp-content/uploads/sites/17/elementor/thumbs/logo_builderhaus_w-q35hpxgzk99wueq8uq79n51obb1sgzzh7midvpl7uo.png" title="logo_builderhaus_w" alt="logo_builderhaus_w" loading="lazy" /></noscript>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-8a6fd51 elementor-widget elementor-widget-heading" data-id="8a6fd51" data-element_type="widget" data-widget_type="heading.default">
                                         </div>
                                     </div>
                                 </div>
-                                <div style="width:50%" class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-03966ea" >
+                                <div style="width:50%" class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-03966ea">
                                     <div class="elementor-widget-wrap elementor-element-populated">
-                                        <div class="elementor-element elementor-element-27707e8 elementor-widget elementor-widget-heading" >
+                                        <div class="elementor-element elementor-element-27707e8 elementor-widget elementor-widget-heading">
                                             <div class="elementor-widget-container">
                                                 <h5 class="elementor-heading-title elementor-size-default">Layihələrimiz</h5>
                                             </div>
@@ -960,7 +1027,7 @@
                                         <div class="elementor-element elementor-element-419fbb9 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="419fbb9" data-element_type="widget" data-widget_type="icon-list.default">
                                             <div class="elementor-widget-container">
                                                 <ul class="elementor-icon-list-items">
-                                                   @foreach (var item in project)
+                                                    @foreach (var item in project)
                                                     {
                                                         <li class="elementor-icon-list-item">
                                                             <a href="#">
